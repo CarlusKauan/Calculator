@@ -7,12 +7,108 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/CalculatorView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:textSize="50dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/ResultadoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CalculatorView"
+        android:text="@string/sub_View" />
+
+    <EditText
+        android:id="@+id/Valor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:ems="7"
+        android:textSize="16dp"
+        android:hint="@string/values_Text"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/Valor2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalculatorView" />
+
+
+    <EditText
+        android:id="@+id/Valor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:ems="7"
+        android:textSize="16dp"
+        android:hint="@string/values_Text"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ResultadoView" />
+
+    <RadioGroup
+        android:id="@+id/tip_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:checkedButton="@id/option_sum"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Valor1">
+
+        <RadioButton
+            android:id="@+id/option_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sum_Radio"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/option_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sub_Radio"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/option_multi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/multi_Radio"
+            android:textSize="16dp"/>
+
+        <RadioButton
+            android:id="@+id/option_div"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/divi_Radio"
+            android:textSize="16dp"/>
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/Calc_button"
+        android:text="@string/Calc_button"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tip_options"
+        android:textSize="18dp"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

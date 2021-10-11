@@ -1,3 +1,13 @@
 <resources>
+    <!-- Views / Edit -->
     <string name="app_name">Calculadora</string>
+    <string name="values_Text">Digite o Valor</string>
+    <string name="sub_View">Resultado</string>
+    <!-- Radio Buttons -->
+    <string name="sum_Radio">Soma</string>
+    <string name="sub_Radio">Subtração</string>
+    <string name="multi_Radio">Multiplicação</string>
+    <string name="divi_Radio">Divisão</string>
+    <!-- Button -->
+    <string name="Calc_button">Calcular</string>
 </resources>
